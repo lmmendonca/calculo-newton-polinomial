@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- <style type="text/css">
+html, body, div, form, fieldset, legend, label
+{
+	margin: 0;
+	padding: 0; 
+	font-family: sans-serif;
+	font-size: 12px;
+}
+ul
+{
+	list-style: none;
+}
+input
+{
+	margin: 5px 0px 5px 10px;
+	padding: 5px;
+	width: 250px;
+	border: 1px solid gray;
+}
+button
+{
+	margin: 5px 0px 5px 32px;
+	padding: 5px 10px;
+	border: 1px solid gray;
+	background-color: white;
+}
+label
+{
+	width: 20px;
+	display: inline-block;
+	text-align: right;
+}
+fieldset
+{
+	margin: 10px;
+	display: inline-block;
+	vertical-align: top;
+	min-width: 100px;
+	max-width: 700px;
+	padding: 10px;
+}
+legend
+{
+	padding: 5px;
+}
+.main
+{
+	padding: 20px;
+}
+</style> -->
+	<script type="text/javascript" src="main.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Newton</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+	<link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="app">
+		<div class="container-fluid">
+			<div class="row">
+				<h1 class="display-4" style="font-size: 2.3em; margin-top: 20px">Cálculo de Newton</h1>
+			</div>
+			<br />
+
+			<div class="main">
+				<form>
+					<div class="row">
+						<div >
+							<label for="x-series">x:</label>
+							<input id="x-series" value="" /> </div>
+						<div style="margin-left: 1cm;">
+							<label for="y-series">f(x):</label>
+							<input id="y-series" value="" /> </div>
+					</div>
+
+
+					<div>
+						<br/>
+						<button type="submit" class="btn btn-primary">Interpolar</button>
+					</div>
+					<br/>
+
+					<legend>Resultado</legend>
+
+
+					<div id="result">
+					</div>
+				</form>
+			</div>
+			<script>
+				var form = document.querySelector('form');
+				form.addEventListener('submit', function (evt) {
+					interpolate(document.querySelector('#x-series').value.split(','), document.querySelector('#y-series').value.split(','));
+					evt.preventDefault();
+				}, false);
+
+			</script>
+		</div>
+	</div>
+	</div>
+
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+		integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/6.2.2/math.js"></script>
+	<script src="main.js"></script>
+</body>
+
+
+</html>

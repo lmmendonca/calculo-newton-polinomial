@@ -1,0 +1,54 @@
+/* @import "compass/css3"; */
+
+.invalid {
+    background: red;
+  }
+  
+  .table-editable {
+    position: relative;
+  
+    .glyphicon {
+      font-size: 20px;
+    }
+  }
+  
+  .table-remove {
+    color: #700;
+    cursor: pointer;
+  
+    &:hover {
+      color: #f00;
+    }
+  }
+  
+  .table-up,
+  .table-down {
+    color: #007;
+    cursor: pointer;
+  
+    &:hover {
+      color: #00f;
+    }
+  }
+  
+  #app {
+      width: 90%;
+      margin: auto;
+      font-size: 1.1em;
+    }
+    
+    #app table {
+      margin: left;
+      font-size: 1em;
+      width: 200px;
+    }
+    
+    #app table td {
+      width: 50px;
+      /* margin-left: 20px; */
+    }
+    
+    /* #app input {
+      width: 60px;
+      height: 40px;
+    } */
